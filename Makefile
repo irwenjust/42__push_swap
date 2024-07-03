@@ -4,6 +4,8 @@ CFLAGS = -Wextra -Wall -Werror -Wunreachable-code -Ofast
 LIBFT = -L./libft -lft
 
 SRCS =	src/main.c src/input_check.c src/delete.c src/tools.c src/ft_long_atoi.c \
+		src/lst/lst_new.c src/lst/lst_last.c src/lst/lst_del_node.c \
+		src/lst/lst_clear.c src/lst/lst_add_front.c src/lst/lst_add_back.c
 
 OBJS = $(SRCS:.c=.o)
 

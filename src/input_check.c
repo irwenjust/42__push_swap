@@ -6,61 +6,62 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 09:16:36 by likong            #+#    #+#             */
-/*   Updated: 2024/07/02 15:16:45 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/03 16:19:13 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
 
-//didn't consider if there have many +- sign before number
+//Only work for 64 bytes system
 static bool	check_overflow(char *str)
 {
 	long	num;
 	size_t	len;
 
 	len = ft_strlen(str);
-	if (len > 9 && len < 12)
+	if (len > 9)
 	{
 		num = ft_long_atoi(str);
-		if (num < INT32_MIN || num > INT32_MAX || num == 0 || num == 1)
+		if (num < INT32_MIN || num > INT32_MAX)
 			return (false);
 	}
-	else if (len >= 12)
-		return (false);
 	return (true);
 }
 
-static bool	check_num(char *str)
+static void	check_num(int *nums, int position)
 {
-	size_t	i;
-	int		sign;
+	int i;
+	int res;
 
-	i = 0;
-	sign = 1;
-	while (str[i] && (str[i] == '-' || str[i] == '+'))
+	res = nums[position];
+	i = position - 1;
+	while (i >= 0)
 	{
-		if (str[i] == '-')
-			sign = sign * (-1);
-		i++;
+		if (nums[i] == res)
+		{
+			free(nums);
+			show_error("Arguments cannot has same number.");
+		}
+		i--;
 	}
-	while (str[i] && ft_isdigit(str[i]))
-		i++;
-	if (str[i] != '\0')
-		return (false);
-	return (true);
 }
 
-void	check_input(int argc, char **argv)
+int	*check_input(int argc, char **argv)
 {
 	int	i;
+	int *nums;
 	
 	i = 1;
+	nums = (int *)malloc((argc) * sizeof(int));
+	if (!nums)
+		show_error("Cannot create space for number array.");
 	while (i < argc)
 	{
-		if (!check_num(argv[i]))
-			show_error("Find argument isn't number.");
 		if (!check_overflow(argv[i]))
 			show_error("Find argument has overflow.");
+		nums[i - 1] = ft_long_atoi(argv[i]);
+		check_num(nums, (i - 1));
 		i++;
 	}
+	return (nums);
 }
