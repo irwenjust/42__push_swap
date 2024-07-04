@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:30 by likong            #+#    #+#             */
-/*   Updated: 2024/07/03 18:29:57 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/04 20:16:08 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,16 @@ static void	check_args(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-	int *nums;
+	t_stack	*a;
+	t_stack	*b;
 
 	check_args(argc, argv);
-	nums = check_input(argc, argv);
-	free(nums);
+	check_input(argc, argv);
+	a = init_stack(argc, argv);
+	b = NULL;
+	push_swap(&a, &b);
+	delete_stack(a);
+	delete_stack(b);
 	return (0);
 }
 

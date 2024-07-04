@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 09:16:36 by likong            #+#    #+#             */
-/*   Updated: 2024/07/03 16:19:13 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/04 16:55:21 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,14 @@ static void	check_num(int *nums, int position)
 		if (nums[i] == res)
 		{
 			free(nums);
-			show_error("Arguments cannot has same number.");
+			ft_printf("Arguments cannot has same number.\n");
+			exit(EXIT_FAILURE);
 		}
 		i--;
 	}
 }
 
-int	*check_input(int argc, char **argv)
+void	check_input(int argc, char **argv)
 {
 	int	i;
 	int *nums;
@@ -54,14 +55,20 @@ int	*check_input(int argc, char **argv)
 	i = 1;
 	nums = (int *)malloc((argc) * sizeof(int));
 	if (!nums)
-		show_error("Cannot create space for number array.");
+	{
+		ft_printf("Cannot create space for number array.\n");
+		exit(EXIT_FAILURE);
+	}
 	while (i < argc)
 	{
 		if (!check_overflow(argv[i]))
-			show_error("Find argument has overflow.");
+		{
+			ft_printf("Find argument has overflow.\n");
+			exit(EXIT_FAILURE);
+		}
 		nums[i - 1] = ft_long_atoi(argv[i]);
 		check_num(nums, (i - 1));
 		i++;
 	}
-	return (nums);
+	free(nums);
 }

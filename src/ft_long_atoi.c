@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:17:19 by likong            #+#    #+#             */
-/*   Updated: 2024/07/03 11:47:51 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/04 16:53:57 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ long	ft_long_atoi(char *str)
 		num = check;
 	}
 	if (str[i] != '\0')
-		show_error("Find argument isn't number.");
+	{
+		ft_printf("Find argument isn't number.\n");
+		exit(EXIT_FAILURE);
+	}
 	return (sig * num);
 }

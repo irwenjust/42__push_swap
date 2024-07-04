@@ -6,14 +6,9 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:03:44 by likong            #+#    #+#             */
-/*   Updated: 2024/07/02 14:47:15 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/04 19:57:06 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
 
-void	show_error(char *message)
-{
-	ft_printf("Error\n%s\n", message);
-	exit(EXIT_FAILURE);
-}

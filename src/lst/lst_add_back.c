@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/03 17:50:12 by likong            #+#    #+#             */
-/*   Updated: 2024/07/03 18:32:52 by likong           ###   ########.fr       */
+/*   Created: 2024/07/04 17:09:15 by likong            #+#    #+#             */
+/*   Updated: 2024/07/04 20:50:12 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ void	lst_add_back(t_stack **lst, t_stack *new)
 	if (!lst || !new)
 		return ;
 	if (!*lst)
-		*lst = new;
+	{
+        *lst = new;
+    }
 	else
 	{
 		last = lst_last(*lst);
 		last->next = new;
-		new->prev = last;
 	}
 }
