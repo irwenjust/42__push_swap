@@ -6,13 +6,13 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 19:58:27 by likong            #+#    #+#             */
-/*   Updated: 2024/07/04 20:50:20 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/05 15:50:58 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/push_swap.h"
 
-void	rotate_a(t_stack **a)
+void	rotate_a(t_stack **a, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -23,10 +23,11 @@ void	rotate_a(t_stack **a)
 	(*a)->next = res;
 	(*a) = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("ra\n");
 }
 
-void	rotate_b(t_stack **b)
+void	rotate_b(t_stack **b, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -37,10 +38,11 @@ void	rotate_b(t_stack **b)
 	(*b)->next = res;
 	(*b) = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("rb\n");
 }
 
-void	rotate_rr(t_stack **a, t_stack **b)
+void	rotate_rr(t_stack **a, t_stack **b, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -56,5 +58,6 @@ void	rotate_rr(t_stack **a, t_stack **b)
 	(*b)->next = res;
 	(*b) = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("rr\n");
 }

@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:49 by likong            #+#    #+#             */
-/*   Updated: 2024/07/04 20:49:38 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/05 15:50:43 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,18 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-//list part 
-// t_stack	*lst_new(int num);
-// t_stack	*lst_last(t_stack *lst);
-// void	lst_del_node(t_stack **lst);
-// void	lst_clear(t_stack **lst, void (*del)(int *));
-// void	lst_add_front(t_stack **lst, t_stack *new);
-// void	lst_add_back(t_stack **lst, t_stack *new);
+typedef struct	s_recorder
+{
+	int	nums;
+	int	steps;
+}	t_recorder;
 
 //Check input
 void	check_input(int argc, char **argv);
 
 //Initial stack
-t_stack	*init_stack(int argc, char **argv);
+t_stack	*init_stack(int argc, char **argv, t_recorder *r);
+void	init_recorder(t_recorder *r);
 
 //Link list functions
 t_stack	*lst_new(int content);
@@ -45,6 +44,10 @@ void	lst_clear(t_stack **lst);
 t_stack	*lst_last(t_stack *lst);
 
 //Tool function
+bool	a_has_sort(t_stack *a);
+int		min(t_stack *s);
+int 	max(t_stack *s);
+
 // void	show_error(t_stack *stack, char *message);
 long	ft_long_atoi(char *str);
 
@@ -52,17 +55,18 @@ long	ft_long_atoi(char *str);
 void	delete_stack(t_stack *stack);
 
 //Rule funcion
-void	swap_a(t_stack **s);
-void	swap_b(t_stack **s);
-void	swap_ss(t_stack **a, t_stack **b);
-void	push_a(t_stack **a, t_stack **b);
-void	push_b(t_stack **a, t_stack **b);
-void	rotate_a(t_stack **a);
-void	rotate_b(t_stack **b);
-void	rotate_rr(t_stack **a, t_stack **b);
-void	rrotate_a(t_stack **a);
-void	rrotate_b(t_stack **b);
-void	rrotate_rr(t_stack **a, t_stack **b);
+void	swap_a(t_stack **s, t_recorder *r);
+void	swap_b(t_stack **s, t_recorder *r);
+void	swap_ss(t_stack **a, t_stack **b, t_recorder *r);
+void	push_a(t_stack **a, t_stack **b, t_recorder *r);
+void	push_b(t_stack **a, t_stack **b, t_recorder *r);
+void	rotate_a(t_stack **a, t_recorder *r);
+void	rotate_b(t_stack **b, t_recorder *r);
+void	rotate_rr(t_stack **a, t_stack **b, t_recorder *r);
+void	rrotate_a(t_stack **a, t_recorder *r);
+void	rrotate_b(t_stack **b, t_recorder *r);
+void	rrotate_rr(t_stack **a, t_stack **b, t_recorder *r);
 
 //algorithm
-void	push_swap(t_stack **a, t_stack **b);
+void	push_swap(t_stack **a, t_stack **b, t_recorder *r);
+void	sort_3_number(t_stack **a, t_recorder *r);

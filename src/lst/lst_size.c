@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_clear.c                                        :+:      :+:    :+:   */
+/*   lst_size.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 17:20:06 by likong            #+#    #+#             */
-/*   Updated: 2024/07/05 15:51:03 by likong           ###   ########.fr       */
+/*   Created: 2024/07/05 13:20:34 by likong            #+#    #+#             */
+/*   Updated: 2024/07/05 15:51:06 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/push_swap.h"
 
-void	lst_clear(t_stack **lst)
+int	lst_size(t_stack *lst)
 {
-	t_stack	*res;
+	int	i;
 
-	if (!lst)
-		return ;
-	while (*lst)
+	i = 0;
+	while (lst)
 	{
-		res = (*lst)->next;
-		(*lst)->num = 0;
-		free(*lst);
-		*lst = res;
+		lst = lst->next;
+		i++;
 	}
+	return (i);
 }

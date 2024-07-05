@@ -6,13 +6,13 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 20:20:40 by likong            #+#    #+#             */
-/*   Updated: 2024/07/04 20:50:22 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/05 15:50:59 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/push_swap.h"
 
-void	rrotate_a(t_stack **a)
+void	rrotate_a(t_stack **a, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -25,10 +25,11 @@ void	rrotate_a(t_stack **a)
 	while (res->next->num != (*a)->num)
 		res = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("rra\n");
 }
 
-void	rrotate_b(t_stack **b)
+void	rrotate_b(t_stack **b, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -41,10 +42,11 @@ void	rrotate_b(t_stack **b)
 	while (res->next->num != (*b)->num)
 		res = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("rrb\n");
 }
 
-void	rrotate_rr(t_stack **a, t_stack **b)
+void	rrotate_rr(t_stack **a, t_stack **b, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -64,5 +66,6 @@ void	rrotate_rr(t_stack **a, t_stack **b)
 	while (res->next->num != (*b)->num)
 		res = res->next;
 	res->next = NULL;
+	r->steps++;
 	ft_printf("rrr\n");
 }

@@ -6,21 +6,22 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:55:17 by likong            #+#    #+#             */
-/*   Updated: 2024/07/04 20:31:17 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/05 15:50:50 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
 
-void	push_swap(t_stack **a, t_stack **b)
+void	push_swap(t_stack **a, t_stack **b, t_recorder *r)
 {
-	//swap_a(stack);
-	ft_printf("before: %d\n", (*a)->num);
-	// push_b(a, b);
-	// push_a(a, b);
+	if (r->nums == 0 || r->nums == 1)
+		return ;
+	else if (r->nums == 2)
+		swap_a(a, r);
+	else if (r->nums == 3)
+		sort_3_number(a, r);
+	ft_printf("Steps: %d\n", r->steps);
 	(void)b;
-	//rotate_a(a);
-	rrotate_a(a);
-	ft_printf("after: %d, last: %d\n", (*a)->num, lst_last(*a)->num);
-	//ft_printf("a: %d, b: %d\n", (*stack)->num, (*b)->num);
+	// ft_printf("after: %d, last: %d\n", (*a)->num, lst_last(*a)->num);
+	// //ft_printf("a: %d, b: %d\n", (*stack)->num, (*b)->num);
 }

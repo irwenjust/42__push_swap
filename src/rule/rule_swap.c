@@ -6,13 +6,13 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 11:52:43 by likong            #+#    #+#             */
-/*   Updated: 2024/07/04 20:50:21 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/05 15:51:00 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib/push_swap.h"
 
-void	swap_a(t_stack **s)
+void	swap_a(t_stack **s, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -22,11 +22,11 @@ void	swap_a(t_stack **s)
 	*s = (*s)->next;
 	res->next = (*s)->next;
 	(*s)->next = res;
+	r->steps++;
 	ft_printf("sa\n");
-	ft_printf("now: %d, next: %d\n", (*s)->num, (*s)->next->num);
 }
 
-void	swap_b(t_stack **s)
+void	swap_b(t_stack **s, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -36,10 +36,11 @@ void	swap_b(t_stack **s)
 	*s = (*s)->next;
 	res->next = (*s)->next;
 	(*s)->next = res;
+	r->steps++;
 	ft_printf("sb\n");
 }
 
-void	swap_ss(t_stack **a, t_stack **b)
+void	swap_ss(t_stack **a, t_stack **b, t_recorder *r)
 {
 	t_stack	*res;
 
@@ -53,5 +54,6 @@ void	swap_ss(t_stack **a, t_stack **b)
 	*b = (*b)->next;
 	res->next = (*b)->next;
 	(*b)->next = res;
+	r->steps++;
 	ft_printf("ss\n");
 }
