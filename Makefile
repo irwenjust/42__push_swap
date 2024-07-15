@@ -7,7 +7,7 @@ SRCS =	src/main.c src/input_check.c src/delete.c src/tools.c src/ft_long_atoi.c 
 		src/init.c src/push_swap.c src/rule/rule_swap.c src/lst/lst_add_back.c \
 		src/lst/lst_clear.c src/lst/lst_new.c src/lst/lst_last.c src/rule/rule_push.c \
 		src/rule/rule_rotate.c src/rule/rule_rrotate.c src/sort.c src/lst/lst_size.c \
-		
+		src/rotate_check.c src/stack_check.c
 
 OBJS = $(SRCS:.c=.o)
 

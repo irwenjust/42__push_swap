@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:49 by likong            #+#    #+#             */
-/*   Updated: 2024/07/05 15:50:43 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/15 18:18:54 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ typedef struct	s_recorder
 	int	steps;
 }	t_recorder;
 
+typedef struct s_tester
+{
+	int	num;
+	int	steps;
+}	t_tester;
+
+
 //Check input
 void	check_input(int argc, char **argv);
 
@@ -42,6 +49,7 @@ t_stack	*lst_new(int content);
 void	lst_add_back(t_stack **lst, t_stack *new);
 void	lst_clear(t_stack **lst);
 t_stack	*lst_last(t_stack *lst);
+int		lst_size(t_stack *lst);
 
 //Tool function
 bool	a_has_sort(t_stack *a);
@@ -70,3 +78,11 @@ void	rrotate_rr(t_stack **a, t_stack **b, t_recorder *r);
 //algorithm
 void	push_swap(t_stack **a, t_stack **b, t_recorder *r);
 void	sort_3_number(t_stack **a, t_recorder *r);
+int		cal_steps_ab(t_stack *a, t_stack *b);
+
+//rotate check
+int		if_rarb(t_stack *a, t_stack *b, int num);
+
+//stack check
+int		find_place_b(t_stack *b, int num);
+int		find_place(t_stack *stack, int num);
