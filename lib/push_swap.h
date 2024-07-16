@@ -79,6 +79,7 @@ void	rrotate_rr(t_stack **a, t_stack **b, t_recorder *r);
 void	push_swap(t_stack **a, t_stack **b, t_recorder *r);
 void	sort_3_number(t_stack **a, t_recorder *r);
 int		cal_steps_ab(t_stack *a, t_stack *b);
+int		cal_steps_ba(t_stack *a, t_stack *b);
 
 //rotate check
 int		if_rarb(t_stack *a, t_stack *b, int num);
@@ -89,3 +90,9 @@ int		if_rrarrb(t_stack *a, t_stack *b, int num);
 //stack check
 int		find_pos_b(t_stack *b, int num);
 int		find_inside(t_stack *stack, int num);
+
+//operate
+int		go_rarb(t_stack **a, t_stack **b, int num, char stack, t_recorder *r);
+int 	go_rrarb(t_stack **a, t_stack **b, int num, char stack, t_recorder *r);
+int 	go_rarrb(t_stack **a, t_stack **b, int num, char stack, t_recorder *r);
+int 	go_rrarrb(t_stack **a, t_stack **b, int num, char stack, t_recorder *r);

@@ -12,6 +12,18 @@
 
 #include "../lib/push_swap.h"
 
+static t_stack	**push_sort_a(t_stack **a, t_stack **b, t_recorder *r)
+{
+	int		steps;
+	t_stack	*res;
+
+	while (*b)
+	{
+		res = *b;
+		steps = cal_steps_ba(*a, *b);
+	}
+}
+
 void	push_until_3_left(t_stack **a, t_stack **b, t_recorder *r)
 {
 	int		steps;
@@ -22,7 +34,18 @@ void	push_until_3_left(t_stack **a, t_stack **b, t_recorder *r)
 		res = *a;
 		steps = cal_steps_ab(a, b);
 		while (steps > 0)
-		{}
+		{
+			if (steps == if_rarb(*a, *b, res->num))
+				steps = go_rarb(a, b, res->num, 'a', r);
+			else if (steps == if_rrarb(*a, *b, res->num))
+				steps = go_rrarb(a, b, res->num, 'a', r);
+			else if (steps == if_rarrb(*a, *b, res->num))
+				steps = go_rarrb(a, b, res->num, 'a', r);
+			else if (steps == if_rrarrb(*a, *b, res->num))
+				steps = go_rrarrb(a, b, res->num, 'a', r);
+			else
+				res = res->next;
+		}
 	}
 }
 
@@ -51,6 +74,7 @@ void	push_swap(t_stack **a, t_stack **b, t_recorder *r)
 	else
 	{
 		*b = push_sort_b(a, r);
+		a = push_sort_a(a, b, r);
 	}
 	ft_printf("Steps: %d\n", r->steps);
 	(void)b;

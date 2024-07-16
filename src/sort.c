@@ -12,6 +12,17 @@
 
 #include "../lib/push_swap.h"
 
+int	cal_steps_ba(t_stack *a, t_stack *b)
+{
+	int		steps;
+	t_stack	*res;
+
+	res = b;
+	while (res)
+	{}
+	return (steps);
+}
+
 int	cal_steps_ab(t_stack *a, t_stack *b)
 {
 	int 	steps;
