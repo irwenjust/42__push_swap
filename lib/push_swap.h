@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:49 by likong            #+#    #+#             */
-/*   Updated: 2024/07/15 18:18:54 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/16 11:44:18 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,10 @@ int		cal_steps_ab(t_stack *a, t_stack *b);
 
 //rotate check
 int		if_rarb(t_stack *a, t_stack *b, int num);
+int		if_rarrb(t_stack *a, t_stack *b, int num);
+int		if_rrarb(t_stack *a, t_stack *b, int num);
+int		if_rrarrb(t_stack *a, t_stack *b, int num);
 
 //stack check
-int		find_place_b(t_stack *b, int num);
-int		find_place(t_stack *stack, int num);
+int		find_pos_b(t_stack *b, int num);
+int		find_inside(t_stack *stack, int num);
