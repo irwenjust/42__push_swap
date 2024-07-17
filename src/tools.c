@@ -6,15 +6,30 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:03:44 by likong            #+#    #+#             */
-/*   Updated: 2024/07/05 15:50:53 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/17 18:10:25 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib/push_swap.h"
 
+void	ft_exit(void)
+{
+	ft_printf("Error\n");
+	exit(EXIT_FAILURE);
+}
+
+void	print_stack(t_stack *stack, char c)
+{
+	while (stack)
+	{
+		ft_printf("%c: %d\n", c, stack->num);
+		stack = stack->next;
+	}
+}
+
 bool	a_has_sort(t_stack *a)
 {
-	int res;
+	int	res;
 
 	res = a->num;
 	while (a->next)
@@ -29,7 +44,7 @@ bool	a_has_sort(t_stack *a)
 
 int	min(t_stack *s)
 {
-	int res;
+	int	res;
 
 	res = s->num;
 	while (s->next)
@@ -41,9 +56,9 @@ int	min(t_stack *s)
 	return (res);
 }
 
-int max(t_stack *s)
+int	max(t_stack *s)
 {
-	int res;
+	int	res;
 
 	res = s->num;
 	while (s->next)

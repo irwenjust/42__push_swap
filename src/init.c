@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 08:05:31 by likong            #+#    #+#             */
-/*   Updated: 2024/07/05 15:50:48 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/17 15:45:24 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,26 @@ void	init_recorder(t_recorder *r)
 t_stack	*init_stack(int argc, char **argv, t_recorder *r)
 {
 	int		i;
+	int		j;
 	int		num;
 	t_stack	*a;
+	char	**res;
 
 	i = 1;
 	a = NULL;
 	while (i < argc)
 	{
-		num = (int)ft_long_atoi(argv[i]);
-		lst_add_back(&a, lst_new(num));
-		r->nums++;
+		res = ft_split(argv[i], ' ');
+		if (!res)
+			ft_exit();
+		j = -1;
+		while (res[++j])
+		{
+			num = (int)ft_long_atoi(res[j]);
+			lst_add_back(&a, lst_new(num));
+			r->nums++;
+		}
+		free_strs(res);
 		i++;
 	}
 	return (a);

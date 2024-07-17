@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:09:15 by likong            #+#    #+#             */
-/*   Updated: 2024/07/05 15:51:02 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/17 18:02:01 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	lst_add_back(t_stack **lst, t_stack *new)
 	if (!lst || !new)
 		return ;
 	if (!*lst)
-	{
-        *lst = new;
-    }
+		*lst = new;
 	else
 	{
 		last = lst_last(*lst);

@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 10:41:14 by likong            #+#    #+#             */
-/*   Updated: 2024/07/16 11:46:27 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/17 19:21:34 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,39 @@ int	cal_steps_ba(t_stack *a, t_stack *b)
 	t_stack	*res;
 
 	res = b;
+	steps = if_rarb(a, b, a->num, 'b');
 	while (res)
-	{}
+	{
+		if (steps > if_rarb(a, b, res->num, 'b'))
+			steps = if_rarb(a, b, res->num, 'b');
+		if (steps > if_rrarb(a, b, res->num, 'b'))
+			steps = if_rrarb(a, b, res->num, 'b');
+		if (steps > if_rarrb(a, b, res->num, 'b'))
+			steps = if_rarrb(a, b, res->num, 'b');
+		if (steps > if_rrarrb(a, b, res->num, 'b'))
+			steps = if_rrarrb(a, b, res->num, 'b');
+		res = res->next;
+	}
 	return (steps);
 }
 
 int	cal_steps_ab(t_stack *a, t_stack *b)
 {
-	int 	steps;
+	int		steps;
 	t_stack	*res;
 
 	res = a;
-	steps = if_rarb(a, b, a->num);
+	steps = if_rarb(a, b, a->num, 'a');
 	while (res)
 	{
-		if (steps > if_rarb(a, b, res->num))
-			steps = if_rarb(a, b, res->num);
-		if (steps > if_rrarb(a, b, res->num))
-			steps = if_rrarb(a, b, res->num);
-		if (steps > if_rarrb(a, b, res->num))
-			steps = if_rarrb(a, b, res->num);
-		if (steps > if_rrarrb(a, b, res->num))
-			steps = if_rrarrb(a, b, res->num);
+		if (steps > if_rarb(a, b, res->num, 'a'))
+			steps = if_rarb(a, b, res->num, 'a');
+		if (steps > if_rrarb(a, b, res->num, 'a'))
+			steps = if_rrarb(a, b, res->num, 'a');
+		if (steps > if_rarrb(a, b, res->num, 'a'))
+			steps = if_rarrb(a, b, res->num, 'a');
+		if (steps > if_rrarrb(a, b, res->num, 'a'))
+			steps = if_rrarrb(a, b, res->num, 'a');
 		res = res->next;
 	}
 	return (steps);

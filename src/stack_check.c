@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:21:14 by likong            #+#    #+#             */
-/*   Updated: 2024/07/16 11:04:07 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/17 18:25:06 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	find_inside(t_stack *stack, int num)
 {
-	int steps;
+	int	steps;
 
 	steps = 0;
 	while (stack && stack->num != num)
@@ -25,26 +25,48 @@ int	find_inside(t_stack *stack, int num)
 	return (steps);
 }
 
-int	find_pos_b(t_stack *b, int num)
+int	find_pos_a(t_stack *a, int num)
 {
-	int		i;
-	t_stack *res;
+	int		steps;
+	t_stack	*res;
 
-	i = 1;
-	if (num > b->num && num < lst_last(b)->num)
-		i = 0;
-	else if (num < min(b) || num > max(b))
-		i = find_inside(b, max(b));
+	steps = 1;
+	if (num < a->num && num > lst_last(a)->num)
+		steps = 0;
+	else if (num < min(a) || num > max(a))
+		steps = find_inside(a, min(a));
 	else
 	{
-		//one place could change
+		res = a->next;
+		while ((a->num > num || res->num < num) && res->next)
+		{
+			a = a->next;
+			res = res->next;
+			steps++;
+		}
+	}
+	return (steps);
+}
+
+int	find_pos_b(t_stack *b, int num)
+{
+	int		steps;
+	t_stack	*res;
+
+	steps = 1;
+	if (num > b->num && num < lst_last(b)->num)
+		steps = 0;
+	else if (num < min(b) || num > max(b))
+		steps = find_inside(b, max(b));
+	else
+	{
 		res = b->next;
 		while (b->num < num || res->num > num)
 		{
 			b = b->next;
 			res = res->next;
-			i++;
+			steps++;
 		}
 	}
-	return (i);
+	return (steps);
 }
