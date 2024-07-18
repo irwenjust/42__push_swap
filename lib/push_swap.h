@@ -6,13 +6,14 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:49 by likong            #+#    #+#             */
-/*   Updated: 2024/07/18 09:01:49 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 14:20:54 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <unistd.h>
 # include <stdlib.h>
 # include <stdbool.h>
 

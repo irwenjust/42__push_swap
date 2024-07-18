@@ -1,6 +1,6 @@
 NAME = push_swap
 NAMEBONUS = checker
-CFLAGS = -Wextra -Wall -Werror -Wunreachable-code -Ofast
+CFLAGS = -Wextra -Wall -Werror
 LIBFT = -L./libft -lft
 
 SRCS =	src/main.c src/input_check.c src/delete.c src/tools.c src/ft_long_atoi.c \

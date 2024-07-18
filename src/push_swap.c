@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:55:17 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 19:21:09 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 14:57:01 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,25 @@ static t_stack	**push_sort_a(t_stack **a, t_stack **b, t_recorder *r)
 		while (steps >= 0)
 		{
 			if (steps == if_rrarrb(*a, *b, res->num, 'b'))
+			{
+				ft_printf("test1\n");
 				steps = go_rrbrra(a, b, res->num, r);
+			}
 			else if (steps == if_rarb(*a, *b, res->num, 'b'))
+			{
+				ft_printf("test2\n");
 				steps = go_rbra(a, b, res->num, r);
+			}
 			else if (steps == if_rrarb(*a, *b, res->num, 'b'))
+			{
+				ft_printf("test3\n");
 				steps = go_rbrra(a, b, res->num, r);
+			}
 			else if (steps == if_rarrb(*a, *b, res->num, 'b'))
+			{
+				ft_printf("test4\n");
 				steps = go_rrbra(a, b, res->num, r);
+			}
 			else
 				res = res->next;
 		}

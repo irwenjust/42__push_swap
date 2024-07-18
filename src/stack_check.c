@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:21:14 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 18:25:06 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 17:04:36 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ int	find_pos_a(t_stack *a, int num)
 	if (num < a->num && num > lst_last(a)->num)
 		steps = 0;
 	else if (num < min(a) || num > max(a))
+	{
 		steps = find_inside(a, min(a));
+		//ft_printf("%d: again, steps: %d\n", num, steps);
+	}
 	else
 	{
 		res = a->next;

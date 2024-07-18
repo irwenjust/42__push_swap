@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:03:44 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 18:10:25 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 14:21:21 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_exit(void)
 {
-	ft_printf("Error\n");
+	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
