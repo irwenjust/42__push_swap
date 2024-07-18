@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:49 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 19:12:41 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 09:01:49 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <stdbool.h>
-# include <stdio.h>
 
 # include "../libft/libft.h"
 # include "../libft/ft_printf/ft_printf.h"
@@ -32,12 +31,6 @@ typedef struct s_recorder
 	int	nums;
 	int	steps;
 }	t_recorder;
-
-typedef struct s_tester
-{
-	int	num;
-	int	steps;
-}	t_tester;
 
 //Check input
 void	check_input(int argc, char **argv);

@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 08:53:30 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 19:25:44 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/18 08:51:18 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_args(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	else if (argc > 1205)
 	{
-		ft_printf("Only allow less than 1206 numbers in this push swap.\n");
+		ft_printf("Sorry, this push_swap cannot handle too many numbers.\n");
 		exit(EXIT_FAILURE);
 	}
 }

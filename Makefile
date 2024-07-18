@@ -1,5 +1,5 @@
 NAME = push_swap
-# NAMEBONUS = so_long_bonus
+NAMEBONUS = checker
 CFLAGS = -Wextra -Wall -Werror -Wunreachable-code -Ofast
 LIBFT = -L./libft -lft
 
@@ -11,30 +11,36 @@ SRCS =	src/main.c src/input_check.c src/delete.c src/tools.c src/ft_long_atoi.c 
 
 OBJS = $(SRCS:.c=.o)
 
-# BONUS_SRCS =	
-# BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+BONUS_SRCS =	src/bonus/main_bonus.c src/bonus/tools_bonus.c src/bonus/input_check_bonus.c \
+				src/bonus/ft_long_atoi_bonus.c src/bonus/lst/lst_add_back_bonus.c \
+				src/bonus/lst/lst_clear_bonus.c src/bonus/lst/lst_last_bonus.c \
+				src/bonus/lst/lst_new_bonus.c src/bonus/lst/lst_size_bonus.c \
+				src/bonus/rule/rule_push_bonus.c src/bonus/rule/rule_rotate_bonus.c \
+				src/bonus/rule/rule_rrotate_bonus.c src/bonus/rule/rule_swap_bonus.c 
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
 %.o: %.c
 	@cc $(CFLAGS) -o $@ -c $< && printf "Compiling: $(notdir $<)\n"
 
-# bonus: $(NAMEBONUS)
+bonus: $(NAMEBONUS)
 
 $(NAME): $(OBJS)
 	@$(MAKE) -C ./libft
 	@cc $(OBJS) $(LIBFT) -o $(NAME)
 
-# $(NAMEBONUS): $(BONUS_OBJS)
-# 	@$(MAKE) -C ./libft
-# 	@cc $(BONUS_OBJS) $(LIBFT) -o $(NAMEBONUS) -Ofast
+$(NAMEBONUS): $(BONUS_OBJS)
+	@$(MAKE) -C ./libft
+	@cc $(BONUS_OBJS) $(LIBFT) -o $(NAMEBONUS)
 
 clean:
 	@rm -rf $(OBJS) $(BONUS_OBJS)
 	@$(MAKE) -C ./libft clean
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(NAME) $(NAMEBONUS)
 	@$(MAKE) -C ./libft fclean
 
 re: clean all
