@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:32:48 by likong            #+#    #+#             */
-/*   Updated: 2024/04/16 14:32:49 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:52:59 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-	printf("%d\n", ft_isascii('1'));
-	return (0);
-}*/

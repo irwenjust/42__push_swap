@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:28:01 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 19:28:02 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:54:35 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,3 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 		ft_putchar_fd(s[i++], fd);
 }
-
-/*
-int main(void)
-{
-	ft_putstr_fd("abc", 1);
-	return (0);
-}
-*/

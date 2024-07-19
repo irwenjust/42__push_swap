@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:11:23 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 20:11:24 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:53:54 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,32 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_list->next = NULL;
 	return (new_list);
 }
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int *content = (int *)malloc(sizeof(int));
-    if (content == NULL) {
-        perror("Failed to allocate memory for content");
-        return 1;
-    }
-    *content = 123;
-
-    t_list *node = ft_lstnew(content);
-
-    if (node == NULL) {
-        printf("Failed to create new node.\n");
-        free(content);
-        return 1;
-    }
-
-    printf("Content of the node: %d\n", *(int *)(node->content));
-
-    free(content);
-    free(node);
-
-    return 0;
-}
-*/

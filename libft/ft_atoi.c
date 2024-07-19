@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:17:19 by likong            #+#    #+#             */
-/*   Updated: 2024/07/02 14:45:56 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:52:35 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sig * num);
 }
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main(void)
-{
-	printf("original number: %d\n", atoi("  -1123456456465465456465"));
-	printf("original number: %d\n", ft_atoi("  -1123456456465465456465"));
-	return (0);
-}
-*/

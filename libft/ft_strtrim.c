@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:41:58 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 10:41:59 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:55:26 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (res);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char *res;
-
-	res = ft_strtrim("lorem ipsum dolor amet", "te");
-	printf("the ori: %s, after ft_strtrim: %s\n", "lorem ipsum dolor amet", res);
-	free(res);
-	return (0);
-}
-*/

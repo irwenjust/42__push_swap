@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:40:26 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 19:40:27 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:54:32 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(change_num_to_char(num % 10), fd);
 	}
 }
-
-/*
-int	main(void)
-{
-	ft_putnbr_fd(-10, 1);
-	return  (0);
-}
-*/

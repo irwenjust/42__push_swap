@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:22:14 by likong            #+#    #+#             */
-/*   Updated: 2024/04/16 14:22:15 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:52:52 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalnum(int c)
 		|| (c >= 'a' && c <= 'z')
 		|| (c >= '0' && c <= '9'));
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-	printf("%d\n", ft_isalnum(' '));
-	return (0);
-}*/

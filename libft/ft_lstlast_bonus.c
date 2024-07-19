@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:58:26 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 20:58:28 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:53:41 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    t_list *head = NULL;
-
-    t_list *node1 = ft_lstnew("Node 1");
-    t_list *node2 = ft_lstnew("Node 2");
-    t_list *node3 = ft_lstnew("Node 3");
-
-    ft_lstadd_front(&head, node1);
-    ft_lstadd_front(&head, node2);
-    ft_lstadd_front(&head, node3);
-
-    t_list *last_node = ft_lstlast(head);
-
-    if (last_node)
-        printf("Last node content: %s\n", (char *)last_node->content);
-    else
-        printf("The list is empty.\n");
-
-    while (head) {
-        t_list *temp = head;
-        head = head->next;
-        free(temp);
-    }
-
-    return 0;
-}
-*/

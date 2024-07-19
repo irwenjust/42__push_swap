@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:34:53 by likong            #+#    #+#             */
-/*   Updated: 2024/04/16 10:34:55 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:53:03 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-	printf("%d\n", ft_isdigit(' '));
-	return (0);
-}*/

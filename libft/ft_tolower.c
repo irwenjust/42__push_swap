@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:37:04 by likong            #+#    #+#             */
-/*   Updated: 2024/04/17 11:37:05 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:55:35 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	printf("orignal: %c, tolower: %c\n", 'Z', ft_tolower('Z'));
-	return (0);
-}
-*/

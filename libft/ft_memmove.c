@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:23:22 by likong            #+#    #+#             */
-/*   Updated: 2024/04/17 16:36:02 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:54:17 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    char src[] = "Hello, world!";
-
-    char dst_memmove_f[20];
-	char dst_memmove_o[20];
-	
-
-    ft_memmove(dst_memmove_f, src, strlen(src));
-	memmove(dst_memmove_o, src, strlen(src));
-	//ft_memmove(dst_memmove_f+1, src, strlen(src) + 1);
-
-    printf("Using memmove: %s\n", dst_memmove_o);
-	printf("Using ft_memmove: %s\n", dst_memmove_f);
-
-    return 0;
-
-}
-*/

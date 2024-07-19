@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:17:03 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 17:17:04 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:53:10 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	printf("%s\n", ft_itoa(0));
-	return (0);
-}
-*/

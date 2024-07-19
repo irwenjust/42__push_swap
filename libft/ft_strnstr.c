@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:21:29 by likong            #+#    #+#             */
-/*   Updated: 2024/04/17 20:21:31 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:55:18 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-
-
-int	main(void)
-{
-	//char *h1 = "1234561235";
-  	//char *n1 = "1235";
-	//char *h2 = "1234561235";
-  	//char *n2 = "1235";
-	printf("ft_strnstr: %s\n", ft_strnstr("", "", 12));
-  	printf("ori: %s\n", strnstr("", "", 12));
-	return (0);
-}
-*/

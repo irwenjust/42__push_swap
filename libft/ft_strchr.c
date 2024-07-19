@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:42:51 by likong            #+#    #+#             */
-/*   Updated: 2024/04/17 11:42:53 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:54:43 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-  char *s1 = strchr("123456", 0);
-  char *s2 = ft_strchr("123456", 0);
-  printf("The original: %s\n", s1);
-  printf("The ft_strchr: %s\n", s2);
-  return (0);
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:13:04 by likong            #+#    #+#             */
-/*   Updated: 2024/04/18 18:13:06 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:54:25 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 	if (fd >= 0)
 		write(fd, &c, 1);
 }
-
-/*
-int	main(void)
-{
-	ft_putchar_fd('a', 1);
-	return (0);
-}
-*/
