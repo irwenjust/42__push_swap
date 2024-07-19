@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:17:19 by likong            #+#    #+#             */
-/*   Updated: 2024/07/18 08:54:04 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 09:36:01 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ long	ft_long_atoi(char *str)
 	sig = 1;
 	while (is_space_or_not(str[i]))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	while ((str[i] == '+' || str[i] == '-') && str[i + 1] != '\0')
 		sig = check_sign(str[i++], sig);
 	while (str[i] >= '0' && str[i] <= '9')
 	{

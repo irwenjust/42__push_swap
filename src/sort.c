@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 10:41:14 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 19:21:34 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:51:26 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	cal_steps_ba(t_stack *a, t_stack *b)
 	t_stack	*res;
 
 	res = b;
-	steps = if_rarb(a, b, a->num, 'b');
+	steps = if_rarb(a, b, b->num, 'b');
 	while (res)
 	{
 		if (steps > if_rarb(a, b, res->num, 'b'))

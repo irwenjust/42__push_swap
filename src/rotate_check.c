@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:08:07 by likong            #+#    #+#             */
-/*   Updated: 2024/07/18 17:04:30 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/19 08:52:09 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	if_rrarb(t_stack *a, t_stack *b, int num, char current)
 		if (find_pos_a(a, num))
 			steps = lst_size(a) - find_pos_a(a, num);
 		steps += find_inside(b, num);
-		ft_printf("%d\n", steps);
 	}
 	return (steps);
 }
