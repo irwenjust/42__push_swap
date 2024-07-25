@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 08:20:01 by likong            #+#    #+#             */
-/*   Updated: 2024/07/18 09:48:22 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/20 12:34:34 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ bool	a_has_sort(t_stack *a);
 
 //special atoi for push_swap
 long	ft_long_atoi(char *str);
+
+//initial stack
+t_stack	*init_stack(int argc, char **argv);
 
 //link list functions
 t_stack	*lst_new(int content);

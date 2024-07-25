@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
+/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 09:16:36 by likong            #+#    #+#             */
-/*   Updated: 2024/07/17 18:21:03 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/25 08:21:33 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	count_num(char **strs)
 	while (strs[++i])
 	{
 		res = ft_split(strs[i], ' ');
-		if (!res)
+		if (!res || (*res) == NULL)
 			ft_exit();
 		j = -1;
 		while (res[++j])

@@ -16,7 +16,8 @@ BONUS_SRCS =	src/bonus/main_bonus.c src/bonus/tools_bonus.c src/bonus/input_chec
 				src/bonus/lst/lst_clear_bonus.c src/bonus/lst/lst_last_bonus.c \
 				src/bonus/lst/lst_new_bonus.c src/bonus/lst/lst_size_bonus.c \
 				src/bonus/rule/rule_push_bonus.c src/bonus/rule/rule_rotate_bonus.c \
-				src/bonus/rule/rule_rrotate_bonus.c src/bonus/rule/rule_swap_bonus.c 
+				src/bonus/rule/rule_rrotate_bonus.c src/bonus/rule/rule_swap_bonus.c \
+				src/bonus/init_bonus.c 
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
+/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 08:38:01 by likong            #+#    #+#             */
-/*   Updated: 2024/07/18 10:33:23 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/25 08:21:24 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,33 +22,6 @@ static void	check_args(int argc, char **argv)
 		ft_printf("Sorry, this push_swap cannot handle too many numbers.\n");
 		exit(EXIT_FAILURE);
 	}
-}
-
-static t_stack	*init_stack(int argc, char **argv)
-{
-	int		i;
-	int		j;
-	int		num;
-	t_stack	*a;
-	char	**res;
-
-	i = 1;
-	a = NULL;
-	while (i < argc)
-	{
-		res = ft_split(argv[i], ' ');
-		if (!res)
-			ft_exit();
-		j = -1;
-		while (res[++j])
-		{
-			num = (int)ft_long_atoi(res[j]);
-			lst_add_back(&a, lst_new(num));
-		}
-		free_strs(res);
-		i++;
-	}
-	return (a);
 }
 
 static char	*check_operation(t_stack **a, t_stack **b, char *line)

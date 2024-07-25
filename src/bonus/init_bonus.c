@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_size.c                                         :+:      :+:    :+:   */
+/*   init_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 13:20:34 by likong            #+#    #+#             */
-/*   Updated: 2024/07/25 08:22:11 by likong           ###   ########.fr       */
+/*   Created: 2024/07/20 12:33:29 by likong            #+#    #+#             */
+/*   Updated: 2024/07/25 08:21:21 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib/push_swap.h"
+#include "../../lib/push_swap_bonus.h"
 
-int	lst_size(t_stack *lst)
+t_stack	*init_stack(int argc, char **argv)
 {
-	int	i;
+	int		i;
+	int		j;
+	int		num;
+	t_stack	*a;
+	char	**res;
 
-	i = 0;
-	while (lst)
+	i = 1;
+	a = NULL;
+	while (i < argc)
 	{
-		lst = lst->next;
+		res = ft_split(argv[i], ' ');
+		if (!res)
+			ft_exit();
+		j = -1;
+		while (res[++j])
+		{
+			num = (int)ft_long_atoi(res[j]);
+			lst_add_back(&a, lst_new(num));
+		}
+		free_strs(res);
 		i++;
 	}
-	return (i);
+	return (a);
 }

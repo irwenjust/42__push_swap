@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likong <likong@student.42.fr>              +#+  +:+       +#+        */
+/*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:55:17 by likong            #+#    #+#             */
-/*   Updated: 2024/07/19 08:44:22 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/25 08:21:39 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,14 @@ static void	push_until_3_left(t_stack **a, t_stack **b, t_recorder *r)
 		steps = cal_steps_ab(*a, *b);
 		while (steps >= 0)
 		{
-			if (steps == if_rarb(*a, *b, res->num, 'a'))
-				steps = go_rarb(a, b, res->num, r);
-			else if (steps == if_rrarb(*a, *b, res->num, 'a'))
-				steps = go_rrarb(a, b, res->num, r);
+			if (steps == if_rrarrb(*a, *b, res->num, 'a'))
+				steps = go_rrarrb(a, b, res->num, r);
 			else if (steps == if_rarrb(*a, *b, res->num, 'a'))
 				steps = go_rarrb(a, b, res->num, r);
-			else if (steps == if_rrarrb(*a, *b, res->num, 'a'))
-				steps = go_rrarrb(a, b, res->num, r);
+			else if (steps == if_rrarb(*a, *b, res->num, 'a'))
+				steps = go_rrarb(a, b, res->num, r);
+			else if (steps == if_rarb(*a, *b, res->num, 'a'))
+				steps = go_rarb(a, b, res->num, r);
 			else
 				res = res->next;
 		}
