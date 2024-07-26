@@ -3,8 +3,8 @@ This project is trying to create a sort algorithm. In my push_swap, the basic id
 The final grade is 125/100.
 
 ## **The visualizer for this project**   
-https://github.com/irwenjust/42__push_swap/issues/1#issue-2431524736   
-
+![push_swap](https://github.com/irwenjust/42__push_swap/issues/1#issue-2431524736) 
+   
 ## **Some parts of work**  
 **Mandatory**   
 Arguments check:  
