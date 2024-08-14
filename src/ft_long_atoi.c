@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:17:19 by likong            #+#    #+#             */
-/*   Updated: 2024/07/25 08:21:29 by likong           ###   ########.fr       */
+/*   Updated: 2024/08/14 10:16:52 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ long	ft_long_atoi(char *str)
 		num = check;
 	}
 	if (str[i] != '\0')
-		ft_exit();
+		return (2147483649);
 	return (sig * num);
 }

@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 09:16:36 by likong            #+#    #+#             */
-/*   Updated: 2024/07/25 08:21:33 by likong           ###   ########.fr       */
+/*   Updated: 2024/08/14 10:20:15 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,14 @@ static int	count_num(char **strs)
 static bool	check_overflow(char *str)
 {
 	long	num;
-	size_t	len;
-
-	len = ft_strlen(str);
-	if (len > 9)
-	{
-		num = ft_long_atoi(str);
-		if (num < INT32_MIN || num > INT32_MAX)
-			return (false);
-	}
+	
+	num = ft_long_atoi(str);
+	if (num < INT32_MIN || num > INT32_MAX)
+		return (false);
 	return (true);
 }
 
-static void	check_num(int *nums, int position, char **strs)
+static void	check_dup(int *nums, int position, char **strs)
 {
 	int	i;
 	int	res;
@@ -74,7 +69,7 @@ static void	check_detail(char **res, int **nums, int *k, int *j)
 	if (!check_overflow(res[*k]))
 		free_sum((*nums), res);
 	(*nums)[++(*j)] = ft_long_atoi(res[*k]);
-	check_num((*nums), (*j), res);
+	check_dup((*nums), (*j), res);
 }
 
 void	check_input(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: likong <likong@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:03:44 by likong            #+#    #+#             */
-/*   Updated: 2024/07/25 08:21:46 by likong           ###   ########.fr       */
+/*   Updated: 2024/07/25 10:58:52 by likong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,6 @@ void	ft_exit(void)
 {
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
-}
-
-void	print_stack(t_stack *stack, char c)
-{
-	while (stack)
-	{
-		ft_printf("%c: %d\n", c, stack->num);
-		stack = stack->next;
-	}
 }
 
 bool	a_has_sort(t_stack *a)
